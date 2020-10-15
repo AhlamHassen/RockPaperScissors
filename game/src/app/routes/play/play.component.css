@@ -1,0 +1,63 @@
+:host{
+    display: block;
+    width: 800px;
+    height: 320px;
+    margin: 100px auto;
+    padding: 15px;
+}
+
+.rpsBox{
+    width: 700px;
+    height: 150px;
+    border: 1px solid #cccc;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #ccc;
+}
+
+.smallBoxesFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.smallBoxes{
+    width: 115px;
+    height: 115px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.gameName{
+    color:  black;
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+}
+
+.rock{
+    background-image: url('../../../assets/rock.png');
+    background-size: cover;
+}
+
+.paper{
+    background-image: url('../../../assets/paper.png');
+    background-size: cover;
+}
+
+.scissors{
+    background-image: url('../../../assets/scissors.png');
+    background-size: cover;
+}
+
+.btn{
+    margin-left: 310px;
+    margin-top: 30px;
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(30deg, #ccc 0%, #cb1f20 43%, #ccc 100%);
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #ffff;
+}
