@@ -59,6 +59,11 @@
     color: #4c483a;
 }
 
+.paper{
+    background-image: url('../../../assets/paper.png');
+    background-size: cover;
+}
+
 .scissors{
     background-image: url('../../../assets/scissors.png');
     background-size: cover;
