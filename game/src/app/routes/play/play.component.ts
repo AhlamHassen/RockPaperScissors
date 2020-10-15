@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { GameService } from '../../../game.service';
 
 @Component({
   selector: 'app-play',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayComponent implements OnInit {
 
-  constructor() { }
+  rockSelected: boolean = false;
+  paperSelected: boolean = false;
+  scissorsSelected: boolean = false;
+
+  constructor(private gameservice: GameService) { }
 
   ngOnInit(): void {
+  }
+
+  optionClicked(option: 'rock' | 'paper' | 'scissors'){
+    if(option == 'rock'){
+      this.rockSelected = this.rockSelected? false : true;
+      
+      this.paperSelected = false;
+      this.scissorsSelected = false;
+
+    }else if(option == 'paper'){
+      this.paperSelected = this.paperSelected? false : true;
+
+      this.rockSelected = false;
+      this.scissorsSelected = false;
+    }else{
+      this.scissorsSelected = this.scissorsSelected? false: true;
+
+      this.rockSelected = false;
+      this.paperSelected = false;
+    }
+
+    this.gameservice.selectedOption(option);
+  }
+
+  buttonClicked(){
+    this.gameservice.comitSelection();
   }
 
 }

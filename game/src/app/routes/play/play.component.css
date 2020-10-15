@@ -61,3 +61,7 @@
     font-size: 17px;
     color: #ffff;
 }
+
+.selected {
+    border: 2px solid #c33c3d;
+}

@@ -4,11 +4,11 @@
 <div class="rpsBox">
     <div class="smallBoxesFlex">
 
-        <div class="rock smallBoxes"></div>
-        <div class="paper smallBoxes"></div>
-        <div class="scissors smallBoxes"></div>
+        <div class="rock smallBoxes" [ngClass]="{'selected' : rockSelected}" (click)="optionClicked('rock')"></div>
+        <div class="paper smallBoxes" [ngClass]="{'selected' : paperSelected}" (click)="optionClicked('paper')"></div>
+        <div class="scissors smallBoxes" [ngClass]="{'selected' : scissorsSelected}" (click)="optionClicked('scissors')"></div>
         
     </div>
-    <button class="btn">Shoot!</button>
+    <button class="btn" (click)="buttonClicked()">Shoot!</button>
 
 </div>
