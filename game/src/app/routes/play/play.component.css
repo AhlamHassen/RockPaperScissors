@@ -1,14 +1,14 @@
 :host{
     display: block;
     width: 800px;
-    height: 320px;
+    height: 330px;
     margin: 100px auto;
     padding: 15px;
 }
 
 .rpsBox{
     width: 700px;
-    height: 150px;
+    height: 160px;
     border: 1px solid #cccc;
     padding: 50px;
     border-radius: 10px;
