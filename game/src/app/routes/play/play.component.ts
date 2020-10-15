@@ -40,6 +40,10 @@ export class PlayComponent implements OnInit {
   }
 
   buttonClicked(){
+    if(this.gameservice.selection == null){
+      alert('No option was selected');
+      return;
+    }
     this.gameservice.comitSelection();
   }
 
