@@ -5,7 +5,9 @@ import { ResultsComponent } from './routes/results/results.component';
 
 const routes: Routes = [
   {path: "play", component: PlayComponent},
-  {path: "result", component: ResultsComponent}
+  {path: "results", component: ResultsComponent},
+
+  {path: "**", redirectTo: "play"}
 ];
 
 @NgModule({
