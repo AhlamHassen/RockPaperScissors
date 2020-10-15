@@ -10,16 +10,17 @@ export class GameService {
 
   result: 'Win' | 'Loose';
   private _selection? : 'rock' | 'paper' | 'scissors';
+  private _compSelction: 'rock' | 'paper' | 'scissors';
 
   get selection(){
     return this._selection;
   }
 
-  constructor(private router: Router) { }
-
-  get computerSelection(){
-    return 'scissors';
+  get compSelection(){
+    return this._compSelction;
   }
+
+  constructor(private router: Router) { }
 
   selectedOption(option: 'rock' | 'paper' | 'scissors'){
     this._selection = option;
@@ -40,6 +41,6 @@ export class GameService {
     of(null).pipe(delay(1000)).subscribe(() => {
       this.router.navigateByUrl('/play');
     });
-
+    this._selection = null;
   }
 }
