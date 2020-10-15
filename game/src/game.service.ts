@@ -36,4 +36,10 @@ export class GameService {
     });
   }
 
+  playAgain(){
+    of(null).pipe(delay(1000)).subscribe(() => {
+      this.router.navigateByUrl('/play');
+    });
+
+  }
 }
