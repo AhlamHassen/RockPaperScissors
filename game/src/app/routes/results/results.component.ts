@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit} from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 import { GameService } from 'src/game.service';
 
 @Component({
@@ -8,9 +9,17 @@ import { GameService } from 'src/game.service';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor(private game: GameService) { }
+  nameOfclass: string;
 
+  constructor(private game: GameService, private router: Router) { }
+
+  @HostListener("window:beforeunload", ["$event"]) 
+  unloadHandler(event: Event) {
+    return false;
+  }
+ 
   ngOnInit(): void {
+    this.nameOfclass = this.game.selection;
   }
 
   tryAgain(){
