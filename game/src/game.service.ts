@@ -49,7 +49,6 @@ export class GameService {
     if(this._selection === undefined ){
       if(localStorage.getItem('selection') != null){
         this._selection = JSON.parse(localStorage.getItem('selection'));
-        console.log('selection is stored');
       }
     }
   }
