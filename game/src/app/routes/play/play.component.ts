@@ -45,6 +45,7 @@ export class PlayComponent implements OnInit {
       return;
     }
     this.gameservice.comitSelection();
+    localStorage.setItem('selection', JSON.stringify(this.gameservice.selection));
   }
 
 }

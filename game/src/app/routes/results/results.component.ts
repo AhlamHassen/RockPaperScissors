@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit} from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { GameService } from 'src/game.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { GameService } from 'src/game.service';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent implements OnInit{
 
   nameOfclass: string;
 
@@ -17,9 +17,11 @@ export class ResultsComponent implements OnInit {
   unloadHandler(event: Event) {
     return false;
   }
- 
+
   ngOnInit(): void {
+    this.game.fromStorage();
     this.nameOfclass = this.game.selection;
+    console.log('game selection: ' + this.nameOfclass);
   }
 
   tryAgain(){
