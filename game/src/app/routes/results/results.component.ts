@@ -13,11 +13,6 @@ export class ResultsComponent implements OnInit{
 
   constructor(private game: GameService, private router: Router) { }
 
-  @HostListener("window:beforeunload", ["$event"]) 
-  unloadHandler(event: Event) {
-    return false;
-  }
-
   ngOnInit(): void {
     this.game.fromStorage();
     this.nameOfclass = this.game.selection;
