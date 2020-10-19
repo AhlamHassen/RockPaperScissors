@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +22,7 @@ export class GameService {
     return this._compSelction;
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private httpClient: HttpClient) { }
 
   selectedOption(option: 'rock' | 'paper' | 'scissors'){
     this._selection = option;
