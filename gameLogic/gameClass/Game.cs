@@ -9,6 +9,12 @@ namespace gameClass
         [JsonProperty("GameResult")]
         public string GameResult { get; set; }
 
+        [JsonProperty("CpuChoice")]
+        public string CpuChoice { get; set; }
+
+        [JsonProperty("PlayerChoice")]
+        public string PlayerChoice { get; set; }
+
         public Game(string gameResult)
         {
             this.GameResult = gameResult;
@@ -28,7 +34,7 @@ namespace gameClass
 
             if (pChoice == cpChoice)
             {
-                return "Draw";
+                return this.GameResult = "Draw" + cpChoice;
             }
             else
             {
@@ -68,11 +74,10 @@ namespace gameClass
 
                         break;
 
-
                 }
             }
 
-            return this.GameResult;
+            return this.GameResult + cpChoice;
         }
     }
 }

@@ -26,7 +26,7 @@ namespace webApi.Controllers
         public string determineWinner([FromBody] Player p)
         {
             string result = this.GamePlayed.getGameResultAgainstCPU(p.PlayerChoice);
-            return result + this.GamePlayed.;
+            return result;
         }
 
     }
