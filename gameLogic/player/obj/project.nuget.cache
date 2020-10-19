@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OuB8Z3B8SCtxPMaNMPzUDvrUAwz5KWW/GC1eGZGxKQNq7e6WEaaPEERduH3Sq/Q2LWsEx4/ibtnLVpNCq776pA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ahlam\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Ahlam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

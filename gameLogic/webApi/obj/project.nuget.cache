@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GyGcuoZiIOOBDE0c0MZwuTSHA+ZuC+JWAhzPDDsd1TPxx350LAHffjjWk4jkbQG+DY22tNETORWosfsvApjj5A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahlam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

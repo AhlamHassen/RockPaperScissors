@@ -1,0 +1,12 @@
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Debug\netstandard2.0\gameClass.deps.json
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Debug\netstandard2.0\gameClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Debug\netstandard2.0\gameClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Debug\netstandard2.0\CompClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Debug\netstandard2.0\CompClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.csprojAssemblyReference.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.AssemblyInfoInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.AssemblyInfo.cs
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.csproj.CoreCompileInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.csproj.CopyComplete
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Debug\netstandard2.0\gameClass.pdb
