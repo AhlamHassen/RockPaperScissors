@@ -1,0 +1,9 @@
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\bin\Release\netstandard2.0\player.deps.json
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\bin\Release\netstandard2.0\player.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\bin\Release\netstandard2.0\player.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.csprojAssemblyReference.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.AssemblyInfoInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.AssemblyInfo.cs
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.csproj.CoreCompileInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\player\obj\Release\netstandard2.0\player.pdb

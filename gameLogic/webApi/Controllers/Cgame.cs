@@ -22,7 +22,7 @@ namespace webApi.Controllers
             this.GamePlayed = new Game();
         }
 
-        [HttpPost]
+        [HttpPost("PostSelection")]
         public Game determineWinner([FromBody] Player p)
         {
             this.GamePlayed.getGameResultAgainstCPU(p);

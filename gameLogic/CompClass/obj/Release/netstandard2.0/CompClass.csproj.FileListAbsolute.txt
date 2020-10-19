@@ -1,0 +1,9 @@
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\bin\Release\netstandard2.0\CompClass.deps.json
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\bin\Release\netstandard2.0\CompClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\bin\Release\netstandard2.0\CompClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.csprojAssemblyReference.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.AssemblyInfoInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.AssemblyInfo.cs
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.csproj.CoreCompileInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\CompClass\obj\Release\netstandard2.0\CompClass.pdb
