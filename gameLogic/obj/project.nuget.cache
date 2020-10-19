@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7JB8900/MkeXCSwDEZ6dVSpwUeK963BMRLK4pcjqSWjPq2ieV5XYWu3q8UDCzMKOgw+NG8YdIFMDAZU5Ved7Wg==",
+  "dgSpecHash": "qw9uOxLYaNoAk1UWIfFfHViptOM247hjR6cFDmzVB27t8lShybblBLVc4xkEYdlZ00elvhDzxiT9IdIrFTizuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameLogic.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahlam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
