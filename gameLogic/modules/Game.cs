@@ -9,7 +9,7 @@ namespace gameLogic.modules
 
         public Game()
         {
-
+            this.GameResult = "";
         }
 
         public string getGameResultAgainstCPU(string playerChoice)
