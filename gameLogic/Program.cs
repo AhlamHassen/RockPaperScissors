@@ -1,4 +1,5 @@
 ﻿using System;
+using gameLogic.modules;
 
 namespace gameLogic
 {
@@ -6,7 +7,13 @@ namespace gameLogic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Player p1 = new Player();
+            string p = p1.PlayerChoice = "rock";
+
+            Game g1 = new Game();
+            string result = g1.getGameResultAgainstCPU(p);
+            Console.WriteLine(result);
+            
         }
     }
 }
