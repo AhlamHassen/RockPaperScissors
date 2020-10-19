@@ -6,21 +6,24 @@ namespace CompClass
     public class CPU
     {
         [JsonProperty("CpuChoice")]
-        public string CpuChoice {get; set;}
+        public string CpuChoice { get; set; }
 
-        public CPU(){
+        public CPU()
+        {
             this.CpuChoice = this.generateCpuChoice();
         }
 
-        public string generateCpuChoice(){
-            string[] gameChoices = new string [3]{"rock", "paper", "scissors"};
+        public string generateCpuChoice()
+        {
+            string[] gameChoices = new string[3] { "rock", "paper", "scissors" };
             Random rand = new Random();
             int genRand = rand.Next(0, 3);
 
             return gameChoices[genRand];
         }
 
-        public string getCpuChoice(){
+        public string getCpuChoice()
+        {
             return this.CpuChoice;
         }
     }

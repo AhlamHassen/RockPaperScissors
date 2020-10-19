@@ -16,17 +16,17 @@ namespace webApi.Controllers
     {
         [JsonProperty("GamePlayed")]
         public Game GamePlayed { get; set; }
-        
+
         public CgameController()
         {
             this.GamePlayed = new Game();
         }
 
         [HttpPost]
-        public string determineWinner([FromBody] Player p)
+        public Game determineWinner([FromBody] Player p)
         {
-            string result = this.GamePlayed.getGameResultAgainstCPU(p.PlayerChoice);
-            return result;
+            this.GamePlayed.getGameResultAgainstCPU(p);
+            return this.GamePlayed;
         }
 
     }

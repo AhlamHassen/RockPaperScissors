@@ -342,7 +342,8 @@
       "gameClass/1.0.0": {
         "dependencies": {
           "CompClass": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "player": "1.0.0"
         },
         "runtime": {
           "gameClass.dll": {}

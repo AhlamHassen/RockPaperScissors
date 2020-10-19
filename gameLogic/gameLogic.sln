@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gameClass", "gameClass\game
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi", "webApi\webApi.csproj", "{D9D6B610-F58A-46F7-BF79-16920DA04A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "player", "player\player.csproj", "{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{D9D6B610-F58A-46F7-BF79-16920DA04A1D}.Release|x64.Build.0 = Release|Any CPU
 		{D9D6B610-F58A-46F7-BF79-16920DA04A1D}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9D6B610-F58A-46F7-BF79-16920DA04A1D}.Release|x86.Build.0 = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|x64.Build.0 = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Debug|x86.Build.0 = Debug|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|x64.ActiveCfg = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|x64.Build.0 = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|x86.ActiveCfg = Release|Any CPU
+		{5441D7F7-DD45-4FA4-A781-CC14AD34D60F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

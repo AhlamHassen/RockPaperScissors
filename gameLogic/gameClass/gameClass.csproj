@@ -7,5 +7,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CompClass\CompClass.csproj" />
+    <ProjectReference Include="..\player\player.csproj" />
   </ItemGroup>
 </Project>

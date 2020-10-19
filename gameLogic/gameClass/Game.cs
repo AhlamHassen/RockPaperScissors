@@ -1,47 +1,45 @@
 ﻿using System;
 using Newtonsoft.Json;
 using CompClass;
+using player;
 
 namespace gameClass
 {
     public class Game
     {
-        [JsonProperty("GameResult")]
-        public string GameResult { get; set; }
+        [JsonProperty("PlayerChoice")]
+        public string PlayerChoice { get; set; }
 
         [JsonProperty("CpuChoice")]
         public string CpuChoice { get; set; }
 
-        [JsonProperty("PlayerChoice")]
-        public string PlayerChoice { get; set; }
+        [JsonProperty("GameResult")]
+        public string GameResult { get; set; }
 
-        public Game(string gameResult)
-        {
-            this.GameResult = gameResult;
-
-        }
 
         public Game()
         {
             this.GameResult = "";
+            this.CpuChoice = "";
+            this.PlayerChoice = "";
         }
 
-        public string getGameResultAgainstCPU(string playerChoice)
+        public void getGameResultAgainstCPU(Player player)
         {
-            string pChoice = playerChoice;
+            this.PlayerChoice = player.PlayerChoice;
             CPU cp = new CPU();
-            string cpChoice = cp.generateCpuChoice();
+            this.CpuChoice = cp.generateCpuChoice();
 
-            if (pChoice == cpChoice)
+            if (this.PlayerChoice == this.CpuChoice)
             {
-                return this.GameResult = "Draw" + cpChoice;
+                this.GameResult = "Draw";
             }
             else
             {
-                switch (pChoice)
+                switch (this.PlayerChoice)
                 {
                     case "rock":
-                        if (cpChoice == "paper")
+                        if (this.CpuChoice == "paper")
                         {
                             this.GameResult = "Loose";
                         }
@@ -52,7 +50,7 @@ namespace gameClass
                         break;
 
                     case "paper":
-                        if (cpChoice == "rock")
+                        if (this.CpuChoice == "rock")
                         {
                             this.GameResult = "Win";
                         }
@@ -63,7 +61,7 @@ namespace gameClass
                         break;
 
                     case "scissors":
-                        if (cpChoice == "paper")
+                        if (this.CpuChoice == "paper")
                         {
                             this.GameResult = "Win";
                         }
@@ -77,7 +75,6 @@ namespace gameClass
                 }
             }
 
-            return this.GameResult + cpChoice;
         }
     }
 }
