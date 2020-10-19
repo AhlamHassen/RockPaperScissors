@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VC55QRB8WRsHLh/EHGBLYrWs/cpXHcNAdXJUSC6fyjPvKzf4ryXt/ncaUDYeafrkTk66dd5mD8A9/nLKq6YPzQ==",
+  "dgSpecHash": "eAfrBQOhKg3Uohk4Y5jU9oiNIloR/UZsDytFp9i1/L+kI4y8pLeCYJCnA5cib3wQnaZnsyCdwTtM3e7YKG8Tkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ahlam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.8\\microsoft.netcore.app.host.linux-x64.3.1.8.nupkg.sha512"
+    "C:\\Users\\Ahlam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
