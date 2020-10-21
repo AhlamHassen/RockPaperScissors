@@ -1,9 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵPlayer } from '@angular/core';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
+
+import { Game, GameEnvelope, Player } from './app/Player';
 
 @Injectable({
   providedIn: 'root'
@@ -53,5 +55,17 @@ export class GameService {
         this._selection = JSON.parse(localStorage.getItem('selection'));
       }
     }
+  }
+
+  
+  // https://cors-anywhere.herokuapp.com/ -- added infront of my API to prevent Referrer Policy: strict-origin-when-cross-origin
+  get(){
+    let request = this.httpClient.post<Game>("https://cors-anywhere.herokuapp.com/http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
+      PlayerChoice : this._selection
+    } as Player);
+
+    request.subscribe((response) => {
+      console.log(response);
+    });
   }
 }
