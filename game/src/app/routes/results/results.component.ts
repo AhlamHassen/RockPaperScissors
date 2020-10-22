@@ -22,7 +22,7 @@ export class ResultsComponent implements OnInit {
     this.compChoiceClass = this.game.compSelection;
     this.gameResult = this.game.gameResult;
     if(this.gameResult == 'Draw'){
-      this.pronun = 'It is a';
+      this.pronun = 'It Is a';
     }
     else{
       this.pronun = 'You';
