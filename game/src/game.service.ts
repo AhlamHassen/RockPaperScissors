@@ -71,7 +71,7 @@ export class GameService {
   // https://cors-anywhere.herokuapp.com/ -- removed this because of security issues.
   get() {
     let request = this.httpClient.post<Game>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
-      PlayerChoice: this._selection
+      playerChoice: this._selection
     } as Player);
 
     request.subscribe((response) => {

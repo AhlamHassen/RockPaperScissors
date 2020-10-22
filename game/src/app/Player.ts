@@ -5,5 +5,5 @@ export interface Game{
 }
 
 export interface Player{
-    PlayerChoice : string;
+    playerChoice : string;
 }
