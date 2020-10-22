@@ -12,9 +12,9 @@ import { Game, Player } from './app/Player';
 })
 export class GameService {
 
-  private _gameResult: string;
   private _selection?: 'rock' | 'paper' | 'scissors';
   private _compSelction: string;
+  private _gameResult: string;
 
   get selection() {
     return this._selection;
@@ -38,6 +38,7 @@ export class GameService {
     of(null).pipe(delay(1000)).subscribe(() => {
       if (this._selection == null) {
         alert('No option was selected');
+        return;
       }
 
       this.router.navigateByUrl('/results');

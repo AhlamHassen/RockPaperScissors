@@ -36,11 +36,15 @@ export class PlayComponent implements OnInit {
       this.paperSelected = false;
     }
 
-    this.gameservice.selectedOption(option);
+    if(this.rockSelected != false || this.paperSelected != false || this.scissorsSelected != false){
+      this.gameservice.selectedOption(option);
+    }
+
   }
 
   buttonClicked(){
-    if(this.gameservice.selection == null){
+    if(this.rockSelected == false && this.paperSelected == false && this.scissorsSelected == false){
+      console.log('all are false');
       alert('No option was selected');
       return;
     }
