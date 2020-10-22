@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using gameClass;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using gameClass;
 using player;
 
 namespace webApi.Controllers
@@ -22,8 +18,8 @@ namespace webApi.Controllers
             this.GamePlayed = new Game();
         }
 
-        [HttpPost("PostSelection")] // [FromBody]
-        public Game determineWinner(Player p)
+        [HttpPost("PostSelection")] 
+        public Game determineWinner([FromBody] Player p)
         {
             this.GamePlayed.getGameResultAgainstCPU(p);
             return this.GamePlayed;
