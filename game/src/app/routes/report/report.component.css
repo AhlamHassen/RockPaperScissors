@@ -1,0 +1,55 @@
+:host{
+    display: block;
+    width: 800px;
+    height: 390px;
+    margin: 100px auto;
+    padding: 15px;
+}
+
+.reportBox{
+    width: 680px;
+    height: 240px;
+    border: 1px solid #cccc;
+    padding: 50px;
+    box-shadow: 2px 2px 6px #ccc;
+    background-color: #fcf2f2; 
+}
+
+.gameName{
+    color:  black;
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+}
+
+table{
+    width: 700px;
+    border-collapse: collapse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+td, th {
+    padding: 10px;
+    border-bottom: 9px solid transparent; 
+    background-clip: padding-box; 
+}
+
+td{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.rpTitle{
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
