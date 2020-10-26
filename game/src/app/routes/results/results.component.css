@@ -81,3 +81,14 @@
     font-size: 15px;
     color: #ffff;
 }
+
+.link{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif; 
+    color: #cb1f20;
+}
+
+.linkDiv{
+    margin-top: 15px;
+    margin-left: 655px;
+}

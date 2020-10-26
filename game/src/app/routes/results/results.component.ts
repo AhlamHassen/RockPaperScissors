@@ -21,12 +21,14 @@ export class ResultsComponent implements OnInit {
     this.playerChoiceclass = this.game.selection;
     this.compChoiceClass = this.game.compSelection;
     this.gameResult = this.game.gameResult;
+
     if(this.gameResult == 'Draw'){
       this.pronun = 'It Is a';
     }
     else{
       this.pronun = 'You';
     }
+
   }
 
   tryAgain() {

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlayComponent } from './routes/play/play.component';
 import { ResultsComponent } from './routes/results/results.component';
+import { ReportComponent } from './routes/report/report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayComponent,
-    ResultsComponent
+    ResultsComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
