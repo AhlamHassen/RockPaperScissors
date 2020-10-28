@@ -2,6 +2,7 @@
   <ItemGroup>
     <ProjectReference Include="..\gameClass\gameClass.csproj" />
     <ProjectReference Include="..\player\player.csproj" />
+    <ProjectReference Include="..\userClass\userClass.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />

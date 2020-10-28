@@ -8,9 +8,13 @@ namespace player
         [JsonProperty("PlayerChoice")]
         public string PlayerChoice { get; set; }
 
+        [JsonProperty("UserName")]
+        public string UserName { get; set; }
+
         public Player()
         {
             this.PlayerChoice = "";
+            this.UserName = "";
         }
 
         public string getPlayerChoice()

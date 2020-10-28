@@ -27,6 +27,7 @@
           "Newtonsoft.Json": "12.0.3",
           "gameClass": "1.0.0",
           "player": "1.0.0",
+          "userClass": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -361,6 +362,17 @@
         },
         "compile": {
           "player.dll": {}
+        }
+      },
+      "userClass/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "userClass.dll": {}
+        },
+        "compile": {
+          "userClass.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2081,6 +2093,11 @@
       "sha512": ""
     },
     "player/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "userClass/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
