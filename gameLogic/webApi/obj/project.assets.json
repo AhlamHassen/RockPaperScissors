@@ -39,6 +39,19 @@
           "bin/placeholder/gameClass.dll": {}
         }
       },
+      "LeaderboardLine/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/LeaderboardLine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaderboardLine.dll": {}
+        }
+      },
       "player/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -96,6 +109,11 @@
       "path": "../gameClass/gameClass.csproj",
       "msbuildProject": "../gameClass/gameClass.csproj"
     },
+    "LeaderboardLine/1.0.0": {
+      "type": "project",
+      "path": "../LeaderboardLine/LeaderboardLine.csproj",
+      "msbuildProject": "../LeaderboardLine/LeaderboardLine.csproj"
+    },
     "player/1.0.0": {
       "type": "project",
       "path": "../player/player.csproj",
@@ -104,6 +122,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "LeaderboardLine >= 1.0.0",
       "Newtonsoft.Json >= 12.0.3",
       "gameClass >= 1.0.0",
       "player >= 1.0.0"
@@ -137,6 +156,9 @@
           "projectReferences": {
             "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj": {
               "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj"
+            },
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj"
             },
             "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj": {
               "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj"

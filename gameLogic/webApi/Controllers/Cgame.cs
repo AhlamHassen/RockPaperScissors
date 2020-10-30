@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using gameClass;
 using player;
+using LeaderboardLine;
 
 namespace webApi.Controllers
 {
@@ -11,6 +12,12 @@ namespace webApi.Controllers
     [Route("[controller]")]
     public class CgameController : ControllerBase
     {
+        static List<LeaderbrdLine> Leaderboard = new List<LeaderbrdLine>(){
+            new LeaderbrdLine("amiiy", 52, 60),
+            new LeaderbrdLine("asd123", 45, 87),
+            new LeaderbrdLine("jkl2000", 44, 82)
+        };
+
         [JsonProperty("GamePlayed")]
         public Game GamePlayed { get; set; }
 
@@ -20,10 +27,17 @@ namespace webApi.Controllers
         }
 
         [HttpPost("PostSelection")]
-        public Game determineWinner([FromBody] Player p)
+        public Game determineWinner([FromBody] PlayerSelection p)
         {
+            //if this p.username is already in a database then just play else insert them into the player table
             this.GamePlayed.getGameResultAgainstCPU(p);
+            //insert this game into the game/turn table in the database
             return this.GamePlayed;
+        }
+
+        [HttpGet("Leaderboard")]
+        public List<LeaderbrdLine> getLeaderboard(){
+            return Leaderboard;
         }
 
     }

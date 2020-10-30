@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "webApi/1.0.0": {
         "dependencies": {
+          "LeaderboardLine": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
           "gameClass": "1.0.0",
           "player": "1.0.0",
@@ -350,6 +351,17 @@
         },
         "compile": {
           "gameClass.dll": {}
+        }
+      },
+      "LeaderboardLine/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "LeaderboardLine.dll": {}
+        },
+        "compile": {
+          "LeaderboardLine.dll": {}
         }
       },
       "player/1.0.0": {
@@ -2076,6 +2088,11 @@
       "sha512": ""
     },
     "gameClass/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LeaderboardLine/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
