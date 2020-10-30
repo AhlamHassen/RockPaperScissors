@@ -1,9 +1,0 @@
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\bin\Debug\netstandard2.0\userClass.deps.json
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\bin\Debug\netstandard2.0\userClass.dll
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\bin\Debug\netstandard2.0\userClass.pdb
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.csprojAssemblyReference.cache
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.AssemblyInfoInputs.cache
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.AssemblyInfo.cs
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.csproj.CoreCompileInputs.cache
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.dll
-C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\userClass\obj\Debug\netstandard2.0\userClass.pdb
