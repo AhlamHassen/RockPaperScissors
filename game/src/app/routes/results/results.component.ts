@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GameService } from 'src/game.service';
+import { GameService } from 'src/app/game.service';
 
 @Component({
   selector: 'app-results',
@@ -15,9 +15,8 @@ export class ResultsComponent implements OnInit {
   pronun = 'You';
 
   constructor(private game: GameService, private router: Router) { }
-
+  
   ngOnInit(): void {
-    this.game.fromStorage();
     this.playerChoiceclass = this.game.selection;
     this.compChoiceClass = this.game.compSelection;
     this.gameResult = this.game.gameResult;

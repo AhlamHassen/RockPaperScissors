@@ -32,6 +32,8 @@
 .gameName{
     color:  black;
     font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+    display: flex;
+    margin-bottom: 13px;
 }
 
 .rock{
@@ -64,4 +66,12 @@
 
 .selected {
     border: 2px solid #c33c3d;
+}
+
+.username{
+    margin-left: 340px;  
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
 }

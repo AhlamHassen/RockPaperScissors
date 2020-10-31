@@ -1,5 +1,8 @@
 <div class="gameName">
-    <p>Rock, Paper, Scissors</p>
+    <div>Rock, Paper, Scissors</div>
+    <div class="username">Username <input type="text" value="{{this.gameservice.userName}}" (keyup)="onKey(userName.value)"
+      (keyup.enter)="onKey(userName.value)" (blur)="onKey(userName.value)" #userName></div>
+
 </div>
 <div class="rpsBox">
     <div class="smallBoxesFlex">
