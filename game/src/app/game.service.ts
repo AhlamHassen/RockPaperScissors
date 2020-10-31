@@ -5,7 +5,7 @@ import { delay } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 
-import { Game, Player } from './Player';
+import { Game, Player, PlayerSelection } from './Player';
 
 @Injectable({
   providedIn: 'root'
@@ -78,10 +78,8 @@ export class GameService {
       }
     }
 
-    if(this.userName === undefined){
-      if(localStorage.getItem('username') != null){
-        this._userName = JSON.parse(localStorage.getItem('username'));
-      }
+    if(this.userName === undefined && localStorage.getItem('username') != null){
+      this._userName = JSON.parse(localStorage.getItem('username'));
     }
   }
 
@@ -89,8 +87,9 @@ export class GameService {
   // https://cors-anywhere.herokuapp.com/ -- removed this because of security issues.
   post() {
     let request = this.httpClient.post<Game>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
+      userName: this._userName,
       playerChoice: this._selection
-    } as Player);
+    } as PlayerSelection);
 
     request.subscribe((response) => {
       this._compSelction = response.cpuChoice;
