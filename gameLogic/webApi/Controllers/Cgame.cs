@@ -13,9 +13,9 @@ namespace webApi.Controllers
     public class CgameController : ControllerBase
     {
         static List<LeaderbrdLine> Leaderboard = new List<LeaderbrdLine>(){
-            new LeaderbrdLine("amiiy", 52, 60),
+            new LeaderbrdLine("amiiy123", 52, 60),
             new LeaderbrdLine("asd123", 45, 87),
-            new LeaderbrdLine("jkl2000", 44, 82)
+            new LeaderbrdLine("ram2000", 44, 82)
         };
 
         [JsonProperty("GamePlayed")]

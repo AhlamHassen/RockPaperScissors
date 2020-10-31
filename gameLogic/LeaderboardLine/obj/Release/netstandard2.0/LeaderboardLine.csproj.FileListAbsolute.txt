@@ -1,0 +1,8 @@
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\bin\Release\netstandard2.0\LeaderboardLine.deps.json
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\bin\Release\netstandard2.0\LeaderboardLine.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\bin\Release\netstandard2.0\LeaderboardLine.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\obj\Release\netstandard2.0\LeaderboardLine.AssemblyInfoInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\obj\Release\netstandard2.0\LeaderboardLine.AssemblyInfo.cs
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\obj\Release\netstandard2.0\LeaderboardLine.csproj.CoreCompileInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\obj\Release\netstandard2.0\LeaderboardLine.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\LeaderboardLine\obj\Release\netstandard2.0\LeaderboardLine.pdb
