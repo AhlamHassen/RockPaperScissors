@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PlayComponent } from './routes/play/play.component';
 import { ResultsComponent } from './routes/results/results.component';
 import { ReportComponent } from './routes/report/report.component';
+import { RoundsComponent } from './routes/rounds/rounds.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayComponent,
     ResultsComponent,
-    ReportComponent
+    ReportComponent,
+    RoundsComponent
   ],
   imports: [
     BrowserModule,
