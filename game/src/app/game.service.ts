@@ -5,7 +5,8 @@ import { delay } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 
-import { Game, Player, PlayerSelection } from './Player';
+import { Game, LeaderboardLine, Player, PlayerSelection } from './Player';
+import { error } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class GameService {
   private _selection?: 'rock' | 'paper' | 'scissors';
   private _compSelction: string;
   private _gameResult: string;
+  private _leaderboard : LeaderboardLine[];
 
   get selection() {
     return this._selection;
@@ -31,6 +33,10 @@ export class GameService {
 
   get userName(){
     return this._userName;
+  }
+
+  get leaderboard(){
+    return this._leaderboard;
   }
 
   constructor(private router: Router, private httpClient: HttpClient) { 
@@ -93,11 +99,21 @@ export class GameService {
 
     request.subscribe((response) => {
       this._compSelction = response.cpuChoice;
-      localStorage.setItem('cpuSelection', JSON.stringify(this.compSelection));
+      localStorage.setItem('cpuSelection', JSON.stringify(this._compSelction));
 
       this._gameResult = response.gameResult;
-      localStorage.setItem('gameResult', JSON.stringify(this.gameResult));
+      localStorage.setItem('gameResult', JSON.stringify(this._gameResult));
+    }, (error) => {
+      alert("The API is down");
+      console.log(error);
     });
 
+  }
+
+  get(){
+    let request = this.httpClient.get<LeaderboardLine[]>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/Leaderboard");
+    request.subscribe((response) =>{
+     this._leaderboard = response;       
+    })
   }
 }

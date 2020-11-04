@@ -14,3 +14,9 @@ export interface PlayerSelection{
     userName : string;
     playerChoice : string; 
 }
+
+export interface LeaderboardLine{
+    userName : string;
+    winRatio : number;
+    turnsPlayed : number;
+}

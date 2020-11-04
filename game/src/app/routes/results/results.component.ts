@@ -33,4 +33,8 @@ export class ResultsComponent implements OnInit {
   tryAgain() {
     this.game.playAgain();
   }
+
+  displayLeaderbrd(){
+    this.game.get();
+  }
 }

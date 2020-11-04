@@ -6,20 +6,15 @@
     <div class="rpTable">
         <table>
             <tr>
-                <th>Usernmae</th>
+                <th>Username</th>
                 <th>Win Ratio</th>
                 <th>Turns Played</th>
             </tr>
-            <tr>
-                <td>sampled</td>
-                <td>data</td>
-                <td>sap</td>
+            <tr *ngFor="let leadLine of this.game.leaderboard">
+                <td>{{ leadLine.userName }}</td>
+                <td>{{ leadLine.winRatio }}%</td>
+                <td>{{ leadLine.turnsPlayed }}</td>
             </tr>
-            <tr>
-                <td>sampled</td>
-                <td>data</td>
-                <td>sap</td>
-            </tr> 
         </table> 
     </div>
 
