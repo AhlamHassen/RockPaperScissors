@@ -87,6 +87,10 @@ export class GameService {
     if(this.userName === undefined && localStorage.getItem('username') != null){
       this._userName = JSON.parse(localStorage.getItem('username'));
     }
+
+    if(this._leaderboard === undefined && localStorage.getItem('Leaderboard') != null){
+      this._leaderboard = JSON.parse(localStorage.getItem('Leaderboard'));
+    }
   }
 
 
@@ -113,7 +117,8 @@ export class GameService {
   get(){
     let request = this.httpClient.get<LeaderboardLine[]>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/Leaderboard");
     request.subscribe((response) =>{
-     this._leaderboard = response;       
+     this._leaderboard = response;
+     localStorage.setItem('Leaderboard', JSON.stringify(this._leaderboard));      
     })
   }
 }
