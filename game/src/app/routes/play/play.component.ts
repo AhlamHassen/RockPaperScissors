@@ -69,7 +69,7 @@ export class PlayComponent implements OnInit {
       alert('No option was selected');
       return;
     }
-    this.gameservice.comitSelection();
+    this.gameservice.comitPlaySelection();
     localStorage.setItem('playerSelection', JSON.stringify(this.gameservice.selection));
     this.gameservice.post();
   }

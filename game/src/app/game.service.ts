@@ -15,8 +15,9 @@ export class GameService {
 
   private _userName: string;
   private _selection?: 'rock' | 'paper' | 'scissors';
-  private _compSelction: string;
+  private _compSelection: string;
   private _gameResult: string;
+  private _gameRound: number;
   private _leaderboard : LeaderboardLine[];
 
   get selection() {
@@ -24,7 +25,7 @@ export class GameService {
   }
 
   get compSelection() {
-    return this._compSelction;
+    return this._compSelection;
   }
 
   get gameResult() {
@@ -33,6 +34,10 @@ export class GameService {
 
   get userName(){
     return this._userName;
+  }
+
+  get gameRound(){
+    return this._gameRound;
   }
 
   get leaderboard(){
@@ -51,7 +56,7 @@ export class GameService {
     this._userName = username;
   }
 
-  comitSelection() {
+  comitPlaySelection() {
     of(null).pipe(delay(1000)).subscribe(() => {
       if (this._selection == null) {
         alert('No option was selected');
@@ -72,12 +77,12 @@ export class GameService {
 
 
   fromStorage() {
-    if (this._selection === undefined && this._compSelction === undefined && this._gameResult === undefined) {
+    if (this._selection === undefined && this._compSelection === undefined && this._gameResult === undefined) {
       if (localStorage.getItem('playerSelection') != null) {
         this._selection = JSON.parse(localStorage.getItem('playerSelection'));
       }
       if (localStorage.getItem('cpuSelection') != null) {
-        this._compSelction = JSON.parse(localStorage.getItem('cpuSelection'));
+        this._compSelection = JSON.parse(localStorage.getItem('cpuSelection'));
       }
       if (localStorage.getItem('gameResult') != null) {
         this._gameResult = JSON.parse(localStorage.getItem('gameResult'));
@@ -102,8 +107,8 @@ export class GameService {
     } as PlayerSelection);
 
     request.subscribe((response) => {
-      this._compSelction = response.cpuChoice;
-      localStorage.setItem('cpuSelection', JSON.stringify(this._compSelction));
+      this._compSelection = response.cpuChoice;
+      localStorage.setItem('cpuSelection', JSON.stringify(this._compSelection));
 
       this._gameResult = response.gameResult;
       localStorage.setItem('gameResult', JSON.stringify(this._gameResult));
