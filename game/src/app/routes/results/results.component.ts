@@ -9,25 +9,18 @@ import { GameService } from 'src/app/game.service';
 })
 export class ResultsComponent implements OnInit {
 
-  playerChoiceclass: string;
-  compChoiceClass?: string;
-  gameResult?: string;
   pronun = 'You';
 
-  constructor(private game: GameService, private router: Router) { }
+  constructor(public game: GameService, private router: Router) { }
   
   ngOnInit(): void {
-    this.playerChoiceclass = this.game.selection;
-    this.compChoiceClass = this.game.compSelection;
-    this.gameResult = this.game.gameResult;
-
-    if(this.gameResult == 'Draw'){
+    if(this.game.gameResult == 'Draw'){
       this.pronun = 'It Is a';
     }
     else{
       this.pronun = 'You';
     }
-
+    
   }
 
   tryAgain() {

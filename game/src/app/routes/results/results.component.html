@@ -2,12 +2,12 @@
     <p>Rock, Paper, Scissors</p>
 </div>
 <div class="rpsBox">
-    <div class="resultDiv">{{ pronun }} {{ gameResult }}!</div>
+    <div class="resultDiv">{{ pronun }} {{ this.game.gameResult }}!</div>
     <div class="smallBoxesFlex">
 
-        <div class="smallBoxes" [ngClass]="playerChoiceclass" ></div>
+        <div class="smallBoxes" [ngClass]="this.game.selection" ></div>
         <div class="versus smallBoxes"> VS </div>
-        <div class="smallBoxes" [ngClass]="compChoiceClass"></div>
+        <div class="smallBoxes" [ngClass]="this.game.compSelection"></div>
         
     </div>
     <button class="btn" (click)="tryAgain()">Try Again</button>
