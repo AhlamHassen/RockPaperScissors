@@ -15,8 +15,8 @@ export class GameService {
 
   private _userName: string;
   private _selection?: 'rock' | 'paper' | 'scissors';
-  private _compSelection: string;
-  private _gameResult: string;
+  private _compSelection?: string;
+  private _gameResult?: string;
   private _gameRound: number;
   private _leaderboard : LeaderboardLine[];
 
@@ -56,14 +56,24 @@ export class GameService {
     this._userName = username;
   }
 
+  getGameRound(num : number){
+    this._gameRound = num;
+  }
+
   comitPlaySelection() {
     of(null).pipe(delay(1000)).subscribe(() => {
-      if (this._selection == null) {
+      this.router.navigateByUrl('/results');
+    });
+  }
+
+  comitRoundSelection() {
+    of(null).pipe(delay(1000)).subscribe(() => {
+      if (this._gameRound == null) {
         alert('No option was selected');
         return;
       }
 
-      this.router.navigateByUrl('/results');
+      this.router.navigateByUrl('/play');
 
     });
   }
@@ -72,7 +82,7 @@ export class GameService {
     of(null).pipe(delay(1000)).subscribe(() => {
       this.router.navigateByUrl('/play');
     });
-    this._selection = null;
+
   }
 
 
@@ -96,11 +106,20 @@ export class GameService {
     if(this._leaderboard === undefined && localStorage.getItem('Leaderboard') != null){
       this._leaderboard = JSON.parse(localStorage.getItem('Leaderboard'));
     }
+
+    if(this._gameRound === undefined && localStorage.getItem('gameRound') != null){
+      this._gameRound = JSON.parse(localStorage.getItem('gameRound'));
+    }
   }
 
 
   // https://cors-anywhere.herokuapp.com/ -- removed this because of security issues.
   post() {
+    if (this._selection == null) {
+      alert('No option was selected');
+      return;
+    }
+
     let request = this.httpClient.post<Game>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
       userName: this._userName,
       playerChoice: this._selection
@@ -117,6 +136,7 @@ export class GameService {
       console.log(error);
     });
 
+    this.comitPlaySelection();
   }
 
   get(){

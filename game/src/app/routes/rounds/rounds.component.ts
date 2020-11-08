@@ -11,8 +11,13 @@ export class RoundsComponent implements OnInit {
   oneRound : boolean = false;
   threeRounds: boolean = false;
   fiveRounds: boolean = false;
+  roundNumber = 0;
 
-  constructor(public gameservice: GameService) { }
+  constructor(public gameservice: GameService) { 
+    if(localStorage.getItem('username') != null){
+      this.userName = JSON.parse(localStorage.getItem('username'));
+    }
+  }
 
   ngOnInit(): void {
   }
@@ -37,7 +42,19 @@ export class RoundsComponent implements OnInit {
     }
 
     if(this.oneRound != false || this.threeRounds != false || this.fiveRounds != false){
-      //
+      switch(this.oneRound || this.threeRounds || this.fiveRounds){
+        case this.oneRound:
+          this.roundNumber = 1;
+          break;
+        case this.threeRounds:
+          this.roundNumber = 3;
+          break;
+        case this.fiveRounds:
+          this.roundNumber = 5;
+          break;
+      }
+
+      this.gameservice.getGameRound(this.roundNumber);
     }
 
   }
@@ -59,13 +76,15 @@ export class RoundsComponent implements OnInit {
       alert("There was no username entered");
       return; 
     }
-  
+
     if(this.oneRound == false && this.threeRounds == false && this.fiveRounds == false){
       alert('No option was selected');
       return;
     }
-    // this.gameservice.comitSelection();
-    // localStorage.setItem('playerSelection', JSON.stringify(this.gameservice.selection));
+    this.gameservice.comitRoundSelection();
+    localStorage.setItem('gameRound', JSON.stringify(this.gameservice.gameRound));
+
+    console.log(this.roundNumber);
     
   }
 
