@@ -22,7 +22,7 @@ USE TEST;
 -- ('amiiy', '11/09/2020 12:20:20 PM', 'rock', 'rock'),
 -- ('alae', '11/09/2020 12:21:20 PM', 'rock', 'paper'),
 -- ('alae', '11/09/2020 12:21:22 PM', 'scissors', 'paper'),
--- ('alae', '11/09/2020 12:21:20 PM', 'rock', 'scissors');
+-- ('alae', '11/09/2020 12:21:25 PM', 'rock', 'scissors');
 
 -- see all tables in a database
 
