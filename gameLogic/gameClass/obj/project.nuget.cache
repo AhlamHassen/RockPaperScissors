@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rnwetkcIwYRyr2xz71UTv9NUWGm/2hJcUBhRyAwtNKKiWkqTyjn8V27S/YYPxQFfjUw3cn27T/MS+9xfay5R8Q==",
+  "dgSpecHash": "3/IQzlYEM6IIXrLs+OiNaYd5hUaOwaxflLtJyP0V81hRALm/s3TSvl0ucNaM3y7jWcQg7wgRIc8taI36Jyfcdg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
+  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

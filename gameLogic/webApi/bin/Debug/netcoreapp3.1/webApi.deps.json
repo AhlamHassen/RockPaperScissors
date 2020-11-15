@@ -445,7 +445,8 @@
       },
       "player/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
           "player.dll": {}
