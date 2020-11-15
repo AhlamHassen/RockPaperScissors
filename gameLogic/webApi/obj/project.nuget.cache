@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0bi2YGLgtrkhv05QkN/1q+9HZz9aDB4tEllVv1Lp0EVLD/nSM7KLsdTg42A5v82/KYItW8cHtVz0CCUZTbXw8A==",
+  "dgSpecHash": "GHSJjPySxUXpZAs7M2v9mcczFqjXODsqY351lc9jZuqE//zWNjIGZkykIlmOPbzG5DR92AxEMP950EjFSk4Dzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
+  "projectFilePath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
