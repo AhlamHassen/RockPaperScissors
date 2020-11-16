@@ -28,3 +28,4 @@ C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\obj\Rel
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\obj\Release\netcoreapp3.1\linux-x64\webApi.genruntimeconfig.cache
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Release\netcoreapp3.1\linux-x64\LeaderboardLine.dll
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Release\netcoreapp3.1\linux-x64\LeaderboardLine.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Release\netcoreapp3.1\linux-x64\System.Data.SqlClient.dll
