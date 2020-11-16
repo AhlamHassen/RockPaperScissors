@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using gameClass;
 using player;
 using LeaderboardLine;
+using Microsoft.Extensions.Configuration;
 
 namespace webApi.Controllers
 {
@@ -20,12 +21,27 @@ namespace webApi.Controllers
 
         [JsonProperty("Player")]
         public Player Player { get; set; }
-        
 
-        public CgameController()
+        SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
+        IConfiguration  configuration;
+        string connectionString = "";
+        
+        public CgameController(IConfiguration iconfig)
         {
             this.GamePlayed = new Game();
             this.Player = new Player();
+
+            this.configuration = iconfig;
+            //use the configuration to retrieve connection string from appsetting.js
+            this.connectionString = this.configuration.GetSection("ConnectionString").Value;
+
+            //using the string builder to build string connction
+            // this.stringBuilder.DataSource = this.configuration.GetSection("DbConnectionString").GetSection("url").Value;
+            // this.stringBuilder.InitialCatalog = this.configuration.GetSection("DbConnectionString").GetSection("db").Value;
+            // this.stringBuilder.UserID = this.configuration.GetSection("DbConnectionString").GetSection("user").Value;
+            // this.stringBuilder.Password = this.configuration.GetSection("DbConnectionString").GetSection("password").Value;
+
+            // this.connectionString = this.stringBuilder.ConnectionString;
         }
 
         [HttpPost("PostSelection")]
@@ -45,9 +61,7 @@ namespace webApi.Controllers
 
         [HttpGet("Leaderboard")]
         public List<LeaderbrdLine> getLeaderboard(){
-            string connectionString = @"Data Source=rpsdp.ctvssf2oqpbl.us-east-1.rds.amazonaws.com;
-            Initial Catalog=TEST;User ID=admin; Password=kereneritrea";
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(this.connectionString);
             
             string queryString = "SELECT * FROM Leaderboard ORDER BY [Win Ratio] DESC";
 
