@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Data.SqlClient;
 using CompClass;
 using player;
 
@@ -86,6 +87,24 @@ namespace gameClass
                 }
             }
 
+        }
+
+        public void addGame(Game g){
+            string connectionString = @"Data Source=rpsdp.ctvssf2oqpbl.us-east-1.rds.amazonaws.com;
+            Initial Catalog=TEST;User ID=admin; Password=kereneritrea";
+            SqlConnection con = new SqlConnection(connectionString);
+
+            string queryString = "INSERT INTO Game (userName, DateTimePlayed, Playerchoice, Cpuchoice)"; 
+            queryString += "VALUES (@userName, @date, @playerChoice, @cpuChoice)";
+            
+            SqlCommand command = new SqlCommand(queryString, con);
+            command.Parameters.AddWithValue("@userName", g.Player1.UserName);
+            command.Parameters.AddWithValue("@date", g.DateTimePlayed);
+            command.Parameters.AddWithValue("@playerChoice", g.PlayerChoice);
+            command.Parameters.AddWithValue("@cpuChoice", g.CpuChoice);
+
+            con.Open();
+            command.ExecuteNonQuery();
         }
     }
 }
