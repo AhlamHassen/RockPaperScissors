@@ -37,7 +37,7 @@ USE TEST;
 SELECT * FROM Game;
 
 -- CREATE VIEW Leaderboard AS 
--- SELECT P.userName AS Username, CONVERT (INT , ((CAST(W.winNum AS DECIMAL) / P.numPlayed)* 100) )
+-- SELECT P.userName AS Username, CONVERT (INT , ((CAST(ISNULL(W.winNum, 0) as DECIMAL) / P.numPlayed)* 100) )
 -- AS [Win Ratio], P.numPlayed AS [Turns Played]
 -- FROM
 -- ( 
@@ -48,7 +48,7 @@ SELECT * FROM Game;
 --     OR     (playerchoice = 'rock' And Cpuchoice = 'scissors'))
 --     GROUP BY userName 
 -- ) W
--- INNER JOIN
+-- RIGHT JOIN
 -- (
 --     SELECT userName, Count(*) AS numPlayed
 --     FROM Game
