@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vaDLHeJy2ww29SHBHEA+WOtGyTPeH6E85Q1pJpFkfNUrGWsYaZo5Tkj8peRrk0uKH2ykM+aZSue62kjqFKfWRA==",
+  "dgSpecHash": "o+Bss35MXybwKPiBIP3lia3IDCQJY+r2g78TPlCBeG8NOA8AtqPHEGHT/EeSBpG1kMjOfLpGRmeXthw1FaXoQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
   "expectedPackageFiles": [
@@ -13,8 +13,7 @@
     "C:\\Users\\Ahlam\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Ahlam\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\Ahlam\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Ahlam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.8\\microsoft.netcore.app.host.linux-x64.3.1.8.nupkg.sha512"
+    "C:\\Users\\Ahlam\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
