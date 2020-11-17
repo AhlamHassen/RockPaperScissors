@@ -5,6 +5,7 @@
 
 </div>
 <div class="rpsBox">
+    <div class="rounds">Round {{turnsPlayed}}/{{this.gameservice.gameRound}}</div>
     <div class="smallBoxesFlex">
 
         <div class="rock smallBoxes" [ngClass]="{'selected' : rockSelected}" (click)="optionClicked('rock')"></div>

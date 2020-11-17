@@ -75,3 +75,9 @@
 input{
     font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
 }
+
+.rounds{
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+    margin-top: -16px;
+    margin-left: -15px;
+}
