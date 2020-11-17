@@ -10,6 +10,7 @@ import { GameService } from 'src/app/game.service';
 export class ResultsComponent implements OnInit {
 
   pronun = 'You';
+  userName = '';
 
   constructor(public game: GameService, private router: Router) { }
   
@@ -29,5 +30,13 @@ export class ResultsComponent implements OnInit {
 
   displayLeaderbrd(){
     this.game.get();
+  }
+
+  onKey(value: any){
+    this.userName = value;
+    this.game.getUsername(this.userName);
+    if(this.userName != null || this.userName != ''){
+      localStorage.setItem('username', JSON.stringify(this.userName));
+    }
   }
 }

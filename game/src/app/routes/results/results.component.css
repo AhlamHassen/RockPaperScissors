@@ -43,6 +43,8 @@
 .gameName{
     color:  black;
     font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+    display: flex;
+    margin-bottom: 13px;
 }
 
 .rock{
@@ -91,4 +93,12 @@
 .linkDiv{
     margin-top: 15px;
     margin-left: 655px;
+}
+
+.username{
+    margin-left: 320px;  
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
 }
