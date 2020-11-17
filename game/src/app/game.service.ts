@@ -120,7 +120,7 @@ export class GameService {
       return;
     }
 
-    let request = this.httpClient.post<Game>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
+    let request = this.httpClient.post<Game>("http://awseb-AWSEB-1MCJAEJ2VWR4K-868425229.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
       userName: this._userName,
       playerChoice: this._selection
     } as PlayerSelection);
@@ -140,7 +140,7 @@ export class GameService {
   }
 
   get(){
-    let request = this.httpClient.get<LeaderboardLine[]>("http://awseb-AWSEB-1LR165618GBHW-307257313.us-east-1.elb.amazonaws.com/Cgame/Leaderboard");
+    let request = this.httpClient.get<LeaderboardLine[]>("http://awseb-AWSEB-1MCJAEJ2VWR4K-868425229.us-east-1.elb.amazonaws.com/Cgame/Leaderboard");
     request.subscribe((response) =>{
      this._leaderboard = response;
      localStorage.setItem('Leaderboard', JSON.stringify(this._leaderboard));      
