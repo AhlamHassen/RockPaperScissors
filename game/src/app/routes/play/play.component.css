@@ -15,6 +15,18 @@
     box-shadow: 2px 2px 6px #ccc;
 }
 
+.link{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif; 
+    color: #cb1f20;
+}
+
+.linkDiv{
+    margin-top: 15px;
+    margin-left: 695px;
+    margin-bottom: 10px;
+}
+
 .smallBoxesFlex{
     display: flex;
     flex-direction: row;
