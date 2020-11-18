@@ -84,7 +84,11 @@ export class RoundsComponent implements OnInit {
     this.gameservice.comitRoundSelection();
     localStorage.setItem('gameRound', JSON.stringify(this.gameservice.gameRound));
 
-    console.log(this.roundNumber);
+    this.gameservice.playerSelections = [];
+    localStorage.removeItem('playerSelections');
+
+    this.gameservice.compSelections = [];
+    localStorage.removeItem('compSelections');
     
   }
 
