@@ -1,8 +1,9 @@
 export interface Game{
     player1: Player;
     dateTimePlayed : Date;
-    playerChoice : string;
-    cpuChoice : string;
+    gameRound : number;
+    playerSelections : string[];
+    cpuSelections : string[];
     gameResult : string;
 }
 
@@ -12,7 +13,8 @@ export interface Player{
 
 export interface PlayerSelection{
     userName : string;
-    playerChoice : string; 
+    gameRound : number;
+    playerSelections : string[]; 
 }
 
 export interface LeaderboardLine{
