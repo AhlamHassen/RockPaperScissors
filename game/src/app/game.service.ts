@@ -19,6 +19,9 @@ export class GameService {
   private _gameResult?: string;
   private _gameRound: number;
   private _leaderboard : LeaderboardLine[];
+  public selections = [];
+  public compSelections = [];
+  public pronoun = 'You';
 
   get selection() {
     return this._selection;
@@ -83,6 +86,8 @@ export class GameService {
       this.router.navigateByUrl('/play');
     });
 
+    this.selections = [];
+    localStorage.removeItem('playerSelections');
   }
 
 
@@ -109,6 +114,10 @@ export class GameService {
 
     if(this._gameRound === undefined && localStorage.getItem('gameRound') != null){
       this._gameRound = JSON.parse(localStorage.getItem('gameRound'));
+    }
+
+    if(this.selections.length === 0 && localStorage.getItem('playerSelections') != null){
+      this.selections = JSON.parse(localStorage.getItem('playerSelections'));
     }
   }
 

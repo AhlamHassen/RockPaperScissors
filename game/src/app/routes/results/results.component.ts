@@ -9,7 +9,6 @@ import { GameService } from 'src/app/game.service';
 })
 export class ResultsComponent implements OnInit {
 
-  pronun = 'You';
   userName = '';
 
   @HostBinding('class.ifThreeTurn') isThree = false;
@@ -19,10 +18,10 @@ export class ResultsComponent implements OnInit {
   
   ngOnInit(): void {
     if(this.game.gameResult == 'Draw'){
-      this.pronun = 'It Is a';
+      this.game.pronoun = 'It Is a';
     }
     else{
-      this.pronun = 'You';
+      this.game.pronoun = 'You';
     }
 
     if(this.game.gameRound == 1){
@@ -39,7 +38,7 @@ export class ResultsComponent implements OnInit {
       this.isFive = true;
       this.isThree = false;
     } 
-    // console.log(this.game.compSelections[4]);
+    console.log(this.game.selections);
   }
 
   tryAgain() {

@@ -108,13 +108,11 @@ input{
 :host(.ifFiveTurn){
     height: 680px;
     margin-top: 23px;
-    border: 1px solid red;
 }
 
 :host(.ifThreeTurn){
     height: 530px;
     margin-top: 23px;
-    border: 1px solid black;
 }
 
 .rspThree{

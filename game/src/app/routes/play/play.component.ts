@@ -12,6 +12,8 @@ export class PlayComponent implements OnInit {
   paperSelected: boolean = false;
   scissorsSelected: boolean = false;
   userName = '';
+  turnsPlayed = 0;
+  currentOption: string;
 
   constructor(public gameservice: GameService) { 
     if(localStorage.getItem('username') != null){
@@ -42,7 +44,7 @@ export class PlayComponent implements OnInit {
     }
 
     if(this.rockSelected != false || this.paperSelected != false || this.scissorsSelected != false){
-      this.gameservice.selectedOption(option);
+      this.currentOption = option;
     }
 
   }
@@ -70,8 +72,34 @@ export class PlayComponent implements OnInit {
       return;
     }
     
-    localStorage.setItem('playerSelection', JSON.stringify(this.gameservice.selection));
-    this.gameservice.post();
+    this.turnsPlayed++;
+    this.roundSelection(this.currentOption); 
+
+    if(this.turnsPlayed == this.gameservice.gameRound){
+      this.gameservice.post();
+    }
+
+  }
+
+  
+  roundSelection(option: string){
+    if(this.turnsPlayed == 1){
+      this.gameservice.selections[0] = option;
+    }
+    if(this.turnsPlayed == 2){
+      this.gameservice.selections[1] = option;
+    }
+    if(this.turnsPlayed == 3){
+      this.gameservice.selections[2] = option;
+    }
+    if(this.turnsPlayed == 4){
+      this.gameservice.selections[3] = option;
+    }
+    if(this.turnsPlayed == 5){
+      this.gameservice.selections[4] = option;
+    }
+
+    localStorage.setItem('playerSelections', JSON.stringify(this.gameservice.selections));
   }
 
 }
