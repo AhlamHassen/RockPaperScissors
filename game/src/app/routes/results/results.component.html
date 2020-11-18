@@ -3,15 +3,49 @@
     <div class="username">Username <input type="text" value="{{this.game.userName}}" (keyup)="onKey(userName.value)"
         (keyup.enter)="onKey(userName.value)" (blur)="onKey(userName.value)" #userName></div>
 </div>
-<div class="rpsBox">
-    <div class="resultDiv">{{ pronun }} {{ this.game.gameResult }}!</div>
+<div class="rpsBox"  [ngClass]="{'rspThree': isThree === true, 'rspFive':isFive === true }">
+    <div class="resultDiv" [ngClass]="{resThree:isThree === true}" [ngClass]="{resFive:isFive === true}">{{ pronun }} {{ this.game.gameResult }}!</div>
+    
     <div class="smallBoxesFlex">
 
-        <div class="smallBoxes" [ngClass]="this.game.selection" ></div>
-        <div class="versus smallBoxes"> VS </div>
-        <div class="smallBoxes" [ngClass]="this.game.compSelection"></div>
+        <div class="smallBoxes" class="{{this.game.selections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        <div class="versus smallBoxes" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"> VS </div>
+        <div class="smallBoxes" class="{{this.game.compSelections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
         
     </div>
+
+    <div class="smallBoxesFlex" *ngIf="isThree || isFive">
+
+        <div class="smallBoxes" class="{{this.game.selections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        <div class="versus smallBoxes" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"> VS </div>
+        <div class="smallBoxes" class="{{this.game.compSelections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        
+    </div>
+
+    <div class="smallBoxesFlex" *ngIf="isThree || isFive">
+
+        <div class="smallBoxes" class="{{this.game.selections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        <div class="versus smallBoxes" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"> VS </div>
+        <div class="smallBoxes" class="{{this.game.compSelections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        
+    </div>
+
+    <div class="smallBoxesFlex" *ngIf="isFive">
+
+        <div class="smallBoxes" class="{{this.game.selections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        <div class="versus smallBoxes" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"> VS </div>
+        <div class="smallBoxes" class="{{this.game.compSelections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        
+    </div>
+
+    <div class="smallBoxesFlex" *ngIf="isFive">
+
+        <div class="smallBoxes" class="{{this.game.selections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        <div class="versus smallBoxes" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"> VS </div>
+        <div class="smallBoxes" class="{{this.game.compSelections[0]}}" [ngClass]="{'boxThree': isThree === true, 'boxFive':isFive === true }"></div>
+        
+    </div>
+
     <button class="btn" (click)="tryAgain()">Try Again</button>
 
 </div>

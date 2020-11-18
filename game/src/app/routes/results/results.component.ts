@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GameService } from 'src/app/game.service';
 
@@ -12,6 +12,9 @@ export class ResultsComponent implements OnInit {
   pronun = 'You';
   userName = '';
 
+  @HostBinding('class.ifThreeTurn') isThree = false;
+  @HostBinding('class.ifFiveTurn') isFive = false;
+
   constructor(public game: GameService, private router: Router) { }
   
   ngOnInit(): void {
@@ -21,7 +24,22 @@ export class ResultsComponent implements OnInit {
     else{
       this.pronun = 'You';
     }
-    
+
+    if(this.game.gameRound == 1){
+      this.isThree = false;
+      this.isFive = false;
+    }
+
+    if(this.game.gameRound == 3){
+      this.isThree = true;
+      this.isFive = false;
+    }
+
+    if(this.game.gameRound == 5){
+      this.isFive = true;
+      this.isThree = false;
+    } 
+    // console.log(this.game.compSelections[4]);
   }
 
   tryAgain() {
