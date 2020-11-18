@@ -84,22 +84,22 @@ export class PlayComponent implements OnInit {
   
   roundSelection(option: string){
     if(this.turnsPlayed == 1){
-      this.gameservice.selections[0] = option;
+      this.gameservice.playerSelections[0] = option;
     }
     if(this.turnsPlayed == 2){
-      this.gameservice.selections[1] = option;
+      this.gameservice.playerSelections[1] = option;
     }
     if(this.turnsPlayed == 3){
-      this.gameservice.selections[2] = option;
+      this.gameservice.playerSelections[2] = option;
     }
     if(this.turnsPlayed == 4){
-      this.gameservice.selections[3] = option;
+      this.gameservice.playerSelections[3] = option;
     }
     if(this.turnsPlayed == 5){
-      this.gameservice.selections[4] = option;
+      this.gameservice.playerSelections[4] = option;
     }
 
-    localStorage.setItem('playerSelections', JSON.stringify(this.gameservice.selections));
+    localStorage.setItem('playerSelections', JSON.stringify(this.gameservice.playerSelections));
   }
 
 }
