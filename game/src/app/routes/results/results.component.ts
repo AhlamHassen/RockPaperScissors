@@ -17,13 +17,7 @@ export class ResultsComponent implements OnInit {
   constructor(public game: GameService, private router: Router) { }
   
   ngOnInit(): void {
-    if(this.game.gameResult == 'Draw'){
-      this.game.pronoun = 'It Is a';
-    }
-    else{
-      this.game.pronoun = 'You';
-    }
-
+    
     if(this.game.gameRound == 1){
       this.isThree = false;
       this.isFive = false;
@@ -38,7 +32,7 @@ export class ResultsComponent implements OnInit {
       this.isFive = true;
       this.isThree = false;
     } 
-    console.log(this.game.selections);
+    
   }
 
   tryAgain() {
