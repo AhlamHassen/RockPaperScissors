@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XBx0p17M2n4oCiFsj66fF8jPh2rjk+jZCbMV9kFyE/4e1pi4M4Q7weu/nOqC93sWy2bjjnpVyxOClGoSMpBctQ==",
+  "dgSpecHash": "IFnSGHnNHdqUt1Dpw3l7l9nuJka5xcsR7061AWci22d1XhseKXTo/VyHcopJ6NB8oN3z7s0rHts3+xS7cWijUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj",
+  "projectFilePath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahlam\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Ahlam\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
