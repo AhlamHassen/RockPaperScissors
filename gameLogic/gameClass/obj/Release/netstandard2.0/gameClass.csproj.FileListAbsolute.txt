@@ -12,3 +12,5 @@ C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Release\netstandard2.0\gameClass.csproj.CopyComplete
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Release\netstandard2.0\gameClass.dll
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\obj\Release\netstandard2.0\gameClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Release\netstandard2.0\RoundClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\gameClass\bin\Release\netstandard2.0\RoundClass.pdb

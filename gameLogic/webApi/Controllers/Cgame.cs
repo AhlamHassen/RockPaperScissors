@@ -48,13 +48,13 @@ namespace webApi.Controllers
         public Game determineWinner([FromBody] PlayerSelection p)
         {
             //if this user is already in the database then just play else insert them into the player table
-            if(this.Player.doesExist(p) == null){
-                this.Player.addPlayer(p);
-            }
+            // if(this.Player.doesExist(p) == null){
+            //     this.Player.addPlayer(p);
+            // }
 
             //insert this game into the game table in the database
             this.GamePlayed.getGameResultAgainstCPU(p);
-            this.GamePlayed.addGame(this.GamePlayed);
+            // this.GamePlayed.addGame(this.GamePlayed);
 
             return this.GamePlayed;
         }
