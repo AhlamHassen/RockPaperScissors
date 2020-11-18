@@ -159,6 +159,7 @@
         "dependencies": {
           "CompClass": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
+          "RoundClass": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
           "player": "1.0.0"
         },
@@ -194,6 +195,19 @@
         },
         "runtime": {
           "bin/placeholder/player.dll": {}
+        }
+      },
+      "RoundClass/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/RoundClass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoundClass.dll": {}
         }
       }
     }
@@ -562,6 +576,11 @@
       "type": "project",
       "path": "../player/player.csproj",
       "msbuildProject": "../player/player.csproj"
+    },
+    "RoundClass/1.0.0": {
+      "type": "project",
+      "path": "../RoundClass/RoundClass.csproj",
+      "msbuildProject": "../RoundClass/RoundClass.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -579,11 +598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
+      "projectUniqueName": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
       "projectName": "webApi",
-      "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
+      "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\webApi.csproj",
       "packagesPath": "C:\\Users\\Ahlam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\obj\\",
+      "outputPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahlam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -599,14 +618,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj": {
-              "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj"
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj"
             },
-            "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj": {
-              "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj"
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\LeaderboardLine\\LeaderboardLine.csproj"
             },
-            "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj": {
-              "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj"
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj"
             }
           }
         }

@@ -1,0 +1,8 @@
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\bin\Debug\netstandard2.0\RoundClass.deps.json
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\bin\Debug\netstandard2.0\RoundClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\bin\Debug\netstandard2.0\RoundClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.AssemblyInfoInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.AssemblyInfo.cs
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.csproj.CoreCompileInputs.cache
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.pdb

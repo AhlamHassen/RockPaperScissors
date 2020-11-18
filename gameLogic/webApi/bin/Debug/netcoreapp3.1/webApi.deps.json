@@ -423,6 +423,7 @@
         "dependencies": {
           "CompClass": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
+          "RoundClass": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
           "player": "1.0.0"
         },
@@ -454,6 +455,17 @@
         },
         "compile": {
           "player.dll": {}
+        }
+      },
+      "RoundClass/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "RoundClass.dll": {}
+        },
+        "compile": {
+          "RoundClass.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2242,6 +2254,11 @@
       "sha512": ""
     },
     "player/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RoundClass/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -34,3 +34,5 @@ C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Deb
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Debug\netcoreapp3.1\RoundClass.dll
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\webApi\bin\Debug\netcoreapp3.1\RoundClass.pdb

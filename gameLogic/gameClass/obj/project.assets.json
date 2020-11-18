@@ -253,6 +253,19 @@
         "runtime": {
           "bin/placeholder/player.dll": {}
         }
+      },
+      "RoundClass/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/RoundClass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RoundClass.dll": {}
+        }
       }
     }
   },
@@ -924,6 +937,11 @@
       "type": "project",
       "path": "../player/player.csproj",
       "msbuildProject": "../player/player.csproj"
+    },
+    "RoundClass/1.0.0": {
+      "type": "project",
+      "path": "../RoundClass/RoundClass.csproj",
+      "msbuildProject": "../RoundClass/RoundClass.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -931,6 +949,7 @@
       "CompClass >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
+      "RoundClass >= 1.0.0",
       "System.Data.SqlClient >= 4.8.2",
       "player >= 1.0.0"
     ]
@@ -941,11 +960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
+      "projectUniqueName": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
       "projectName": "gameClass",
-      "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
+      "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\gameClass.csproj",
       "packagesPath": "C:\\Users\\Ahlam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\obj\\",
+      "outputPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\gameClass\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahlam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -961,11 +980,14 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj": {
-              "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj"
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\CompClass\\CompClass.csproj"
             },
-            "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj": {
-              "projectPath": "c:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj"
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\player\\player.csproj"
+            },
+            "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\RoundClass\\RoundClass.csproj": {
+              "projectPath": "C:\\Users\\Ahlam\\Desktop\\myRepositories\\RockPaperScissors\\gameLogic\\RoundClass\\RoundClass.csproj"
             }
           }
         }
