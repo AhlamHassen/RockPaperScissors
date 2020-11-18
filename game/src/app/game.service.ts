@@ -14,22 +14,12 @@ import { error } from '@angular/compiler/src/util';
 export class GameService {
 
   private _userName: string;
-  private _selection?: 'rock' | 'paper' | 'scissors';
-  private _compSelection?: string;
   private _gameResult?: string;
   private _gameRound: number;
   private _leaderboard : LeaderboardLine[];
-  public selections = [];
+  public playerSelections = [];
   public compSelections = [];
   public pronoun = 'You';
-
-  get selection() {
-    return this._selection;
-  }
-
-  get compSelection() {
-    return this._compSelection;
-  }
 
   get gameResult() {
     return this._gameResult;
@@ -51,10 +41,6 @@ export class GameService {
     this.fromStorage();
   }
 
-  selectedOption(option: 'rock' | 'paper' | 'scissors') {
-    this._selection = option;
-  }
-
   getUsername(username: string){
     this._userName = username;
   }
@@ -64,13 +50,13 @@ export class GameService {
   }
 
   comitPlaySelection() {
-    of(null).pipe(delay(1000)).subscribe(() => {
+    of(null).pipe(delay(600)).subscribe(() => {
       this.router.navigateByUrl('/results');
     });
   }
 
   comitRoundSelection() {
-    of(null).pipe(delay(1000)).subscribe(() => {
+    of(null).pipe(delay(600)).subscribe(() => {
       if (this._gameRound == null) {
         alert('No option was selected');
         return;
@@ -82,26 +68,19 @@ export class GameService {
   }
 
   playAgain() {
-    of(null).pipe(delay(1000)).subscribe(() => {
-      this.router.navigateByUrl('/play');
-    });
-
-    this.selections = [];
+    this.playerSelections = [];
     localStorage.removeItem('playerSelections');
+
+    this.compSelections = [];
+    localStorage.removeItem('compSelections');
+
+    this.router.navigateByUrl('/play');
   }
 
 
   fromStorage() {
-    if (this._selection === undefined && this._compSelection === undefined && this._gameResult === undefined) {
-      if (localStorage.getItem('playerSelection') != null) {
-        this._selection = JSON.parse(localStorage.getItem('playerSelection'));
-      }
-      if (localStorage.getItem('cpuSelection') != null) {
-        this._compSelection = JSON.parse(localStorage.getItem('cpuSelection'));
-      }
-      if (localStorage.getItem('gameResult') != null) {
-        this._gameResult = JSON.parse(localStorage.getItem('gameResult'));
-      }
+    if (this._gameResult === undefined && localStorage.getItem('gameResult') != null) {
+      this._gameResult = JSON.parse(localStorage.getItem('gameResult'));
     }
 
     if(this.userName === undefined && localStorage.getItem('username') != null){
@@ -116,30 +95,43 @@ export class GameService {
       this._gameRound = JSON.parse(localStorage.getItem('gameRound'));
     }
 
-    if(this.selections.length === 0 && localStorage.getItem('playerSelections') != null){
-      this.selections = JSON.parse(localStorage.getItem('playerSelections'));
+    if(this.playerSelections.length === 0 && localStorage.getItem('playerSelections') != null){
+      this.playerSelections = JSON.parse(localStorage.getItem('playerSelections'));
+    }
+
+    if(this.compSelections.length === 0 && localStorage.getItem('compSelections') != null){
+      this.compSelections = JSON.parse(localStorage.getItem('compSelections'));
     }
   }
 
 
   // https://cors-anywhere.herokuapp.com/ -- removed this because of security issues.
   post() {
-    if (this._selection == null) {
+    if (this.playerSelections.length == 0) {
       alert('No option was selected');
       return;
     }
 
     let request = this.httpClient.post<Game>("http://awseb-AWSEB-1MCJAEJ2VWR4K-868425229.us-east-1.elb.amazonaws.com/Cgame/PostSelection", {
       userName: this._userName,
-      playerChoice: this._selection
+      gameRound: this.gameRound,
+      playerSelections: this.playerSelections
     } as PlayerSelection);
 
     request.subscribe((response) => {
-      this._compSelection = response.cpuChoice;
-      localStorage.setItem('cpuSelection', JSON.stringify(this._compSelection));
+      this.compSelections = response.cpuSelections;
+      localStorage.setItem('compSelections', JSON.stringify(this.compSelections));
 
       this._gameResult = response.gameResult;
       localStorage.setItem('gameResult', JSON.stringify(this._gameResult));
+      
+      if(this.gameResult == 'Draw'){
+        this.pronoun = 'It Is a';
+      }
+      else{
+        this.pronoun = 'You';
+      }
+
     }, (error) => {
       alert("The API is down");
       console.log(error);
