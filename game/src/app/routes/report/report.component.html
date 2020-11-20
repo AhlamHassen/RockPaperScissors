@@ -9,11 +9,13 @@
                 <th>Username</th>
                 <th>Win Ratio</th>
                 <th>Turns Played</th>
+                <th>Last 5 Games</th>
             </tr>
             <tr *ngFor="let leadLine of this.game.leaderboard">
                 <td>{{ leadLine.userName }}</td>
                 <td>{{ leadLine.winRatio }}%</td>
                 <td>{{ leadLine.turnsPlayed }}</td>
+                <td>{{ leadLine.last5Games}}</td>
             </tr>
         </table> 
     </div>
