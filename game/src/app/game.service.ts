@@ -77,7 +77,6 @@ export class GameService {
     this.router.navigateByUrl('/play');
   }
 
-
   fromStorage() {
     if (this._gameResult === undefined && localStorage.getItem('gameResult') != null) {
       this._gameResult = JSON.parse(localStorage.getItem('gameResult'));
