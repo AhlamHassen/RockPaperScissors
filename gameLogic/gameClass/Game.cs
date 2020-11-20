@@ -38,7 +38,7 @@ namespace gameClass
             this.GameResult = "";
         }
 
-        public void getGameResultAgainstCPU(PlayerSelection player)
+        public List<Round> getGameResultAgainstCPU(PlayerSelection player)
         {
             this.Player1 = new Player(player.UserName);
             this.DateTimePlayed = DateTime.Now;
@@ -52,6 +52,7 @@ namespace gameClass
             var drawCount = 0;
             var playerWinCount = 0;
             var CpuWinCount = 0;
+            List<Round> rounds = new List<Round>();
 
             while(round <= this.PlayerSelections.Count){
                 CPU cp = new CPU();
@@ -112,7 +113,7 @@ namespace gameClass
 
                 round++;
                 pSelection++;
-
+                rounds.Add(rnd);
             }    
 
             if(playerWinCount == CpuWinCount){
@@ -125,24 +126,44 @@ namespace gameClass
                 this.GameResult = "Lose";
             }
 
+            return rounds;
         }
 
-        // public void addGame(Game g){
-        //     string connectionString = @"Data Source=rpsdp.ctvssf2oqpbl.us-east-1.rds.amazonaws.com;
-        //     Initial Catalog=TEST;User ID=admin; Password=kereneritrea";
-        //     SqlConnection con = new SqlConnection(connectionString);
+        public void addGame(Game g){
+            string connectionString = @"Data Source=rpsdp.ctvssf2oqpbl.us-east-1.rds.amazonaws.com;
+            Initial Catalog=TEST;User ID=admin; Password=kereneritrea";
+            SqlConnection con = new SqlConnection(connectionString);
 
-        //     string queryString = "INSERT INTO Game (userName, DateTimePlayed, Playerchoice, Cpuchoice)"; 
-        //     queryString += "VALUES (@userName, @date, @playerChoice, @cpuChoice)";
+            string queryString = "INSERT INTO Game (userName, DateTimePlayed, GameRound, GameResult)"; 
+            queryString += "VALUES (@userName, @date, @gameRound, @gameResult)";
+
+            var letter = "";
+            switch (g.GameResult)
+            {
+                case "Win":
+                    letter = "W";
+                    break;
+
+                case "Lose":
+                    letter = "L";
+                    break;
+
+                case "Draw":
+                    letter = "D";
+                    break;
+            }
             
-        //     SqlCommand command = new SqlCommand(queryString, con);
-        //     command.Parameters.AddWithValue("@userName", g.Player1.UserName);
-        //     command.Parameters.AddWithValue("@date", g.DateTimePlayed);
-        //     command.Parameters.AddWithValue("@playerChoice", g.PlayerChoice);
-        //     command.Parameters.AddWithValue("@cpuChoice", g.CpuChoice);
+            SqlCommand command = new SqlCommand(queryString, con);
+            command.Parameters.AddWithValue("@userName", g.Player1.UserName);
+            command.Parameters.AddWithValue("@date", g.DateTimePlayed);
+            command.Parameters.AddWithValue("@gameRound", (int)g.GameRound);
+            command.Parameters.AddWithValue("@gameResult", letter);
 
-        //     con.Open();
-        //     command.ExecuteNonQuery();
-        // }
+            con.Open();
+            command.ExecuteNonQuery();
+            con.Close();
+        }
+
+        
     }
 }

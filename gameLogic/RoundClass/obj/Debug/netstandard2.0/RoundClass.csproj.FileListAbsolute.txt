@@ -6,3 +6,4 @@ C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.csproj.CoreCompileInputs.cache
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.dll
 C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.pdb
+C:\Users\Ahlam\Desktop\myRepositories\RockPaperScissors\gameLogic\RoundClass\obj\Debug\netstandard2.0\RoundClass.csprojAssemblyReference.cache

@@ -26,6 +26,7 @@
         "dependencies": {
           "LeaderboardLine": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
+          "RoundClass": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
           "gameClass": "1.0.0",
           "player": "1.0.0",
@@ -459,7 +460,8 @@
       },
       "RoundClass/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
           "RoundClass.dll": {}

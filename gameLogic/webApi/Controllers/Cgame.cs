@@ -7,6 +7,7 @@ using gameClass;
 using player;
 using LeaderboardLine;
 using Microsoft.Extensions.Configuration;
+using RoundClass;
 
 namespace webApi.Controllers
 {
@@ -22,6 +23,9 @@ namespace webApi.Controllers
         [JsonProperty("Player")]
         public Player Player { get; set; }
 
+        [JsonProperty("Round")]
+        public Round Round { get; set; }
+
         SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
         IConfiguration  configuration;
         string connectionString = "";
@@ -30,6 +34,8 @@ namespace webApi.Controllers
         {
             this.GamePlayed = new Game();
             this.Player = new Player();
+            this.Round = new Round();
+            
 
             this.configuration = iconfig;
             //use the configuration to retrieve connection string from appsetting.js
@@ -47,14 +53,15 @@ namespace webApi.Controllers
         [HttpPost("PostSelection")]
         public Game determineWinner([FromBody] PlayerSelection p)
         {
-            //if this user is already in the database then just play else insert them into the player table
-            // if(this.Player.doesExist(p) == null){
-            //     this.Player.addPlayer(p);
-            // }
+            // if this user is already in the database then just play else insert them into the player table
+            if(this.Player.doesExist(p) == null){
+                this.Player.addPlayer(p);
+            }
 
             //insert this game into the game table in the database
-            this.GamePlayed.getGameResultAgainstCPU(p);
-            // this.GamePlayed.addGame(this.GamePlayed);
+            var rounds = this.GamePlayed.getGameResultAgainstCPU(p);
+            this.GamePlayed.addGame(this.GamePlayed);
+            this.Round.addRound(rounds);
 
             return this.GamePlayed;
         }
@@ -63,7 +70,7 @@ namespace webApi.Controllers
         public List<LeaderbrdLine> getLeaderboard(){
             SqlConnection con = new SqlConnection(this.connectionString);
             
-            string queryString = "SELECT * FROM Leaderboard ORDER BY [Win Ratio] DESC";
+            string queryString = "SELECT TOP 5 * FROM Leaderboard ORDER BY [Win Ratio] DESC";
 
             SqlCommand command = new SqlCommand(queryString, con);
             con.Open();
@@ -72,7 +79,7 @@ namespace webApi.Controllers
                  while(reader.Read()){
 
                     Leaderboard.Add(
-                        new LeaderbrdLine(reader[0].ToString(), (int)reader[1], (int)reader[2])
+                        new LeaderbrdLine(reader[0].ToString(), (int)reader[1], (int)reader[2], reader[3].ToString())
                     );
                 }
             }
