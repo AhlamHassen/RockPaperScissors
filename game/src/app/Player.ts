@@ -21,4 +21,5 @@ export interface LeaderboardLine{
     userName : string;
     winRatio : number;
     turnsPlayed : number;
+    last5Games : string;
 }
